@@ -148,20 +148,6 @@ export default function Home() {
     initializeContract();
   }, []);
 
-  const reclamarRecompensa = async (unit: any) => {
-    if (!unit || !contract) return;
-
-    alertLoading("Transacción en proceso");
-
-    const transactionHash = await createTransactionBlockchain({ ...unit });
-    if (!transactionHash) return alertError("Error al subir la información");
-
-    createTransaction.mutate({
-      hashT: transactionHash,
-      unitId: unit.id,
-    });
-    alertSuccess("Tokens reclamados correctamente");
-  };
   const editarContainer = (cont: any) => {
     console.log("Editar cont", cont);
     setOpen(true);
@@ -195,43 +181,6 @@ export default function Home() {
     });
     setOpen(false);
     alertSuccess("Guardado!!!");
-  };
-  const createTransactionBlockchain = async ({ name, tokens }: any) => {
-    if (!contract) return null;
-    try {
-      console.log("name, tokens", name, tokens);
-      const tx = await contract.addToken(name, tokens);
-      const receipt = await tx.wait();
-
-      console.log("Receipt", receipt);
-      return receipt.transactionHash;
-    } catch (error) {
-      alertError("Error al subir los tokens");
-    }
-    return null;
-  };
-  const obtenerTokensFromBlockchain = async (unit: any) => {
-    if (!contract) {
-      return alertError("El contrato no está inicializado");
-    }
-    alertLoading("Obteniendo");
-
-    try {
-      const metaTokensFromBlockchain = await contract.getToken(unit.placa);
-      console.log("metaTokensFromBlockchain", metaTokensFromBlockchain);
-      alertSuccess(`Esta unit trajo ${metaTokensFromBlockchain} tokens.`);
-    } catch (error: any) {
-      alertError("Error al obtener los tokens");
-      if (error.message) {
-        console.error("Razón del error:", error.message);
-      }
-      if (error.reason) {
-        console.error("Razón del error:", error.reason);
-      }
-      if (error.data) {
-        console.error("Datos adicionales del error:", error.data);
-      }
-    }
   };
 
   const openModalToCreateContainer = () => {
