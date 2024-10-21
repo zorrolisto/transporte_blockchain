@@ -1,0 +1,75 @@
+{
+  "_format": "hh-sol-cache-2",
+  "files": {
+    "/Users/juliocabanillas/Documents/personal/recompesas_blockchain/contracts/TokenStorage.sol": {
+      "lastModificationDate": 1728612379843,
+      "contentHash": "a9532c696b78f2a01f221c5e439d4b71",
+      "sourceName": "contracts/TokenStorage.sol",
+      "solcConfig": {
+        "version": "0.8.0",
+        "settings": {
+          "optimizer": {
+            "enabled": false,
+            "runs": 200
+          },
+          "outputSelection": {
+            "*": {
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers",
+                "metadata"
+              ],
+              "": [
+                "ast"
+              ]
+            }
+          }
+        }
+      },
+      "imports": [],
+      "versionPragmas": [
+        "^0.8.0"
+      ],
+      "artifacts": [
+        "TokenStorage"
+      ]
+    },
+    "/Users/juliocabanillas/Documents/personal/transporte_blockchain/contracts/ShipStorage.sol": {
+      "lastModificationDate": 1729544268701,
+      "contentHash": "6cbe790eb1d278028078da627a4ad6c8",
+      "sourceName": "contracts/ShipStorage.sol",
+      "solcConfig": {
+        "version": "0.8.0",
+        "settings": {
+          "optimizer": {
+            "enabled": false,
+            "runs": 200
+          },
+          "outputSelection": {
+            "*": {
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers",
+                "metadata"
+              ],
+              "": [
+                "ast"
+              ]
+            }
+          }
+        }
+      },
+      "imports": [],
+      "versionPragmas": [
+        "^0.8.0"
+      ],
+      "artifacts": [
+        "ShipStorage"
+      ]
+    }
+  }
+}

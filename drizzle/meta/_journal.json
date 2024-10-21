@@ -1,0 +1,27 @@
+{
+  "version": "7",
+  "dialect": "sqlite",
+  "entries": [
+    {
+      "idx": 0,
+      "version": "6",
+      "when": 1727651397122,
+      "tag": "0000_early_spirit",
+      "breakpoints": true
+    },
+    {
+      "idx": 1,
+      "version": "6",
+      "when": 1727652287114,
+      "tag": "0001_whole_penance",
+      "breakpoints": true
+    },
+    {
+      "idx": 2,
+      "version": "6",
+      "when": 1727872135677,
+      "tag": "0002_spicy_garia",
+      "breakpoints": true
+    }
+  ]
+}
